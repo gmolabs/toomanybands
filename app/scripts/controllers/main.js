@@ -10,7 +10,7 @@ nyApp = angular.module('toomanybandsApp')
 			    	{
 			    		"time" : "20:00",
 			    		"venu" : "cafe du nord",
-			    		"bands": ["erors", "deciet", "dick friction"]
+			    		"bands": ["erors", "deceit", "dick friction"]
 			    	},
 			    	{
 			    		"time" : "11:00",
@@ -40,7 +40,7 @@ nyApp = angular.module('toomanybandsApp')
 			    	{
 			    		"time" : "19:00",
 			    		"venu" : "makeout room",
-			    		"bands": ["erors", "deciet", "dick friction"]
+			    		"bands": ["erors", "deceit", "dick friction"]
 			    	},
 			    	{
 			    		"time" : "11:30",

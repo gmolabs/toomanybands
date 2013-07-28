@@ -1,15 +1,15 @@
-<div class="hero-unit">
-  
-  <ul>
-      <li ng-repeat="day in list.dates">
-	    <div class="date">
-	      	<h3>{{day.date | orderBy:'day.date' | date:'EEE MMM d y' }}</h3>
-	      	<span ng-repeat="show in day.shows">
-	      		<div class="show well">
-		      		<h5>{{show.venu | capitalize}}&nbsp;<span class="label">@{{show.time}}</span></h5>
-			      	<div ng-repeat="band in show.bands">{{band | capitalize}}&nbsp;</div>
+
+<div class="hero-unit">  
+	<ul>
+		<li><h6>Upcoming shows in SF, Oakland, etc.</h6></li>
+		<li ng-repeat="day in list.dates">
+		    <div class="date well">
+		      	<h5>{{day.date | orderBy:'day.date' | date:'EEE MMM d y' }}</h5>
+		      	<div ng-repeat="show in day.shows">
+				      	<span ng-repeat="band in show.bands">{{band | capitalize}}{{{true: ' ', false: ' | '}[$last]}}</span>
+			      		&nbsp;&nbsp;&nbsp;@{{show.venu | capitalize}}&nbsp;<span class="label">{{show.time}}</span>
 			    </div>
-		    </span>
-  </ul>
-  
+			</div>
+		</li>
+	</ul>
 </div>
