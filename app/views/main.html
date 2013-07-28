@@ -1,9 +1,15 @@
 <div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
+  
   <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+      <li ng-repeat="day in list.dates">
+	    <div class="date">
+	      	<h3>{{day.date | orderBy:'day.date' | date:'EEE MMM d y' }}</h3>
+	      	<span ng-repeat="show in day.shows">
+	      		<div class="show well">
+		      		<h5>{{show.venu | capitalize}}&nbsp;<span class="label">@{{show.time}}</span></h5>
+			      	<div ng-repeat="band in show.bands">{{band | capitalize}}&nbsp;</div>
+			    </div>
+		    </span>
   </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+  
 </div>
